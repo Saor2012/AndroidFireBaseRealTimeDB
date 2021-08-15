@@ -1,6 +1,10 @@
 package com.example.realtimefirebasedb.presentation.adapter;
 
+import com.example.realtimefirebasedb.data.model.RTModel;
+
+import java.util.List;
+
 public interface IRVContentAdapter {
-//    void addList(Message item);
+    void updateList(List<RTModel> list);
     int getListSize();
 }

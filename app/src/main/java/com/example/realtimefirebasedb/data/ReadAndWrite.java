@@ -1,5 +1,6 @@
 package com.example.realtimefirebasedb.data;
 
+import com.example.realtimefirebasedb.data.model.RTModel;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -44,7 +45,7 @@ public class ReadAndWrite {
                     }
                 });
         // [END rtdb_write_new_user_task]
-    }
+    }*//*
 
     private void addPostEventListener(DatabaseReference mPostReference) {
         // [START post_value_event_listener]

@@ -1,7 +1,8 @@
 package com.example.realtimefirebasedb.app;
 
 import android.app.Application;
-import com.google.android.datatransport.BuildConfig;
+
+import com.example.realtimefirebasedb.BuildConfig;
 
 import timber.log.Timber;
 

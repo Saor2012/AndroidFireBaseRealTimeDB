@@ -1,17 +1,24 @@
-package com.example.realtimefirebasedb.data;
+package com.example.realtimefirebasedb.data.model;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class RTModel {
     private String name;
     private String description;
-    private String uri;
+    private String url;
 
-    public RTModel(String name, String description, String uri) {
+    public RTModel() {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
+
+    public RTModel(String name, String description, String url) {
         this.name = name;
         this.description = description;
-        this.uri = uri;
+        this.url = url;
     }
 
     public String getDescription() {
@@ -22,8 +29,8 @@ public class RTModel {
         return name;
     }
 
-    public String getUri() {
-        return uri;
+    public String getUrl() {
+        return url;
     }
 
     public void setDescription(String description) {
@@ -34,8 +41,8 @@ public class RTModel {
         this.name = name;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override

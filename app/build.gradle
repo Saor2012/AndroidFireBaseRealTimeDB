@@ -30,11 +30,16 @@ android {
         }
 
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -63,9 +68,9 @@ dependencies {
     implementation "com.google.firebase:firebase-analytics:17.4.4"
     implementation "com.google.firebase:firebase-crashlytics:17.1.1"
     //Firebase
-    implementation "com.google.firebase:firebase-core:17.4.4"
+    //implementation "com.google.firebase:firebase-core:17.4.4"
     //Firebase performance monitorin
-    implementation "com.google.firebase:firebase-perf:19.0.7"
+    //implementation "com.google.firebase:firebase-perf:19.0.7"
 
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:28.3.1')
@@ -73,5 +78,18 @@ dependencies {
     // Declare the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-database'
+
+    // OkHTTP
+    implementation "com.squareup.okhttp3:okhttp:4.3.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.3.1"
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
 }
